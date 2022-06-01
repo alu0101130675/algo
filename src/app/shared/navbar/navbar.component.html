@@ -1,10 +1,15 @@
+<LINK href="./navbar.component.css" rel="stylesheet" type="text/css">
 <nav class="navbar bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand me-2">Navbar</a>
+    <div class="d-flex">
+      <a class="navbar-brand" [routerLink]="['/home']">Inicio</a>
+      <a class="navbar-brand">Mis monedas</a>
+      <a class="navbar-brand"> En seguimiento</a>
+    </div>
     <div class="d-flex">
       <ng-container *ngIf="(user$ | async)===null; else logOutTemplate">
         <button class="btn btn-outline-success me-2" type="submit" [routerLink]="['/sign-in']">Sign In</button>
-        <button class="btn btn-outline-success me-2" type="submit" [routerLink]="['/sign-up']">Sign Up</button>
+        <button class="btn btn-outline-success" type="submit" [routerLink]="['/sign-up']">Sign Up</button>
       </ng-container>
       <ng-template #logOutTemplate>
       <button class="btn btn-outline-success me-2" (click)="onLogout()" type="submit" [routerLink]="['/home']">Log

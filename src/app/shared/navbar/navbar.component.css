@@ -1,0 +1,6 @@
+.link { 
+  color: #a582fd;
+  margin-right: 1;
+  padding-right: 10px;
+}
+.link:hover { color: hsl(75, 93%, 48%); } 
