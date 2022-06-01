@@ -1,19 +1,21 @@
-<div class="container-fluid border border-2 rounded">
+<div class="container-fluid">   
     <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
-                    <th class="col-md-2">Nombre</th>
-                    <th class="col-md-2">precio</th>
+                    <th class="col-md-1">#</th>
+                    <th class="col-md-1">Nombre</th>
+                    <th class="col-md-2">Precio</th>
                     <th class="col-md-1">24H%</th>
                     <th class="col-md-1">7D%</th>
-                    <th class="col-md-2">Marketcap</th>
+                    <th class="col-md-2">Cap. de mercado</th>
                     <th class="col-md-2">Volumen</th>
-                    <th class="col-md-2">Supply</th>
+                    <th class="col-md-2">Oferta</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="border border-end-0" *ngFor="let moneda of monedas">
+                <tr class="hov" *ngFor="let moneda of monedas">
+                    <td>{{1}}</td>
                     <td>{{moneda.Nombre}}</td>
                     <td>{{format(moneda.Precio)}}</td>
                     <td *ngIf="moneda.change24h >= 0" class="text-success fw-bold">{{moneda.change24h}}%</td>
